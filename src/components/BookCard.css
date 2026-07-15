@@ -1,0 +1,142 @@
+.book-card {
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+  background: var(--bg-secondary);
+}
+
+.book-card:hover {
+  box-shadow: var(--card-shadow);
+}
+
+.book-cover {
+  height: 200px;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-hover));
+  overflow: hidden;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.book-card:hover .book-cover img {
+  transform: scale(1.05);
+}
+
+.cover-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+}
+
+.status-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text-secondary);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.status-btn:hover {
+  transform: scale(1.1);
+}
+
+.status-btn.read {
+  color: var(--success);
+}
+
+.book-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.book-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-author {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.book-categories {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.category-tag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 9999px;
+  color: var(--text-secondary);
+}
+
+.book-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.rating {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.star-btn {
+  color: var(--border-color);
+  padding: 0;
+}
+
+.star-btn.active {
+  color: #f59e0b; /* amber-500 */
+}
+
+.star-btn:hover {
+  transform: scale(1.2);
+}
+
+.delete-btn {
+  color: var(--text-secondary);
+  opacity: 0.5;
+}
+
+.delete-btn:hover {
+  color: var(--danger);
+  opacity: 1;
+}
